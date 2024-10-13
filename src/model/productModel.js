@@ -8,6 +8,7 @@ const productSchema = mongoose.Schema({
   desc: { type: String, required: true },
   productInfo: { type: String, required: true },
   image: { type: String },
+  featured: { type: Boolean },
   price: { type: Number, required: true },
   refundPolicy: { type: String, required: true },
   // userOwner: {

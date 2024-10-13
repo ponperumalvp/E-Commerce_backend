@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import { userRouter } from "./src/Router/userRouter.js";
 import { productRouter } from "./src/Router/productRouter.js";
+import { cartRouter } from "./src/Router/cartRouter.js";
 
 dotenv.config();
 const app = express();
@@ -27,6 +28,7 @@ const connectDb = mongoose
 
 app.use("/users", userRouter);
 app.use("/product", productRouter);
+app.use("/cart", cartRouter);
 
 app.listen(port, () => {
   //   connectDB();
