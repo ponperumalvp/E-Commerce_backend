@@ -6,9 +6,9 @@ export const cartProduct = async (req, res) => {
     const { productId, userId, count, name, image, price } = req.body;
 
     const product = await cartModel.findOne({ cartProduct: productId });
-    if (product) {
-      return res.json({ message: "Already Exist" });
-    }
+    // if (product) {
+    //   return res.json({ message: "Already Exist" });
+    // }
 
     const addCart = new cartModel({
       cartProduct: productId,
